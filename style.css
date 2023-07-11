@@ -1,0 +1,229 @@
+@import './reset.css';
+@import './typography.css';
+@font-face {
+  font-family: Sahel;
+  src: url("./fonts/Sahel.eot");
+  src: url("./fonts/Sahel.eot?#iefix") format("embedded-opentype"), url("./fonts/Sahel.woff2") format("woff2"), url("./fonts/Sahel.woff") format("woff"), url("./fonts/Sahel.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: Sahel;
+  src: url("./fonts/Sahel-Bold.eot");
+  src: url("./fonts/Sahel-Bold.eot?#iefix") format("embedded-opentype"), url("./fonts/Sahel-Bold.woff2") format("woff2"), url("./fonts/Sahel-Bold.woff") format("woff"), url("./fonts/Sahel-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: Sahel;
+  src: url("./fonts/Sahel-Light.eot");
+  src: url("./fonts/Sahel-Light.eot?#iefix") format("embedded-opentype"), url("./fonts/Sahel-Light.woff2") format("woff2"), url("./fonts/Sahel-Light.woff") format("woff"), url("./fonts/Sahel-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: Sahel;
+  src: url("./fonts/Sahel-SemiBold.eot");
+  src: url("./fonts/Sahel-SemiBold.eot?#iefix") format("embedded-opentype"), url("./fonts/Sahel-SemiBold.woff2") format("woff2"), url("./fonts/Sahel-SemiBold.woff") format("woff"), url("./fonts/Sahel-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: Sahel;
+  src: url("./fonts/Sahel-Black.eot");
+  src: url("./fonts/Sahel-Black.eot?#iefix") format("embedded-opentype"), url("./fonts/Sahel-Black.woff2") format("woff2"), url("./fonts/Sahel-Black.woff") format("woff"), url("./fonts/Sahel-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+body {
+  background-color: #ffda79;
+  box-sizing: border-box;
+  font-family: Sahel;
+  direction: rtl;
+  position: relative;
+}
+
+.box {
+  display: flex;
+  margin: 10% auto;
+  width: 90%;
+}
+@media screen and (max-width: 1240px) {
+  .box {
+    flex-direction: column;
+  }
+}
+.box_form {
+  width: 40%;
+  max-width: 40%;
+  max-height: 550px;
+  background-color: #40407a;
+  border-radius: 50px;
+  box-shadow: 0px 0px 12px 2px #40407a;
+  padding: 30px;
+  color: #f7f1e3;
+}
+@media screen and (max-width: 1240px) {
+  .box_form {
+    width: 90%;
+    max-width: 90%;
+  }
+}
+.box_cards {
+  width: 55%;
+  background-color: #40407a;
+  border-radius: 50px;
+  box-shadow: 0px 0px 12px 2px #40407a;
+  padding: 30px;
+}
+@media screen and (max-width: 1240px) {
+  .box_cards {
+    width: 90%;
+    max-width: 90%;
+    min-height: 300px;
+  }
+}
+.box_cards_card {
+  padding: 15px 30px;
+  border: 1px solid #000;
+  background-color: rgba(132, 129, 122, 0.2666666667);
+  color: #f7f1e3;
+  border-radius: 0 30px 0 30px;
+  position: relative;
+  margin-bottom: 25px;
+}
+.box_cards_card-title {
+  margin-right: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-right: 1px dotted #f7f1e3;
+  padding: 10px 15px;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+.box_cards_card-description {
+  word-wrap: break-word;
+}
+.box_cards_card-trash {
+  width: 40px;
+}
+@media screen and (min-width: 1240px) {
+  .box-margin {
+    margin: 0 2.5%;
+  }
+}
+@media screen and (max-width: 1240px) {
+  .box-margin {
+    margin: 2.5% 0;
+  }
+}
+.box_tag-form {
+  width: 100%;
+  max-width: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+#error {
+  color: #ff5353;
+  text-align: center;
+}
+
+#title {
+  width: 60%;
+  height: 30px;
+  margin: 15px 0;
+  border: none;
+  border-radius: 30px;
+  padding: 5px 20px 5px 20px;
+  font-family: Sahel;
+  font-weight: 600;
+  font-size: 20px;
+}
+#title:focus-visible {
+  outline: none;
+}
+
+.textarea {
+  width: 80%;
+  max-width: 80%;
+  min-width: 80%;
+  height: 300px;
+  min-height: 300px;
+  max-height: 300px;
+  margin: 15px 0;
+  border: none;
+  border-radius: 30px;
+  padding: 20px 30px 5px 30px;
+  font-family: Sahel;
+  font-weight: 400;
+  font-size: 20px;
+}
+.textarea:focus-visible {
+  outline: none;
+}
+
+.btn {
+  background-color: #ff5252;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0px 0px 2px 2px #ff5252;
+  margin: 0 5px 0 5px;
+  padding: 10px 30px;
+  cursor: pointer;
+  color: #1C2A39;
+  font-family: Sahel;
+  font-weight: 800;
+  font-size: 20px;
+  transition: 300ms;
+}
+.btn:hover {
+  background-color: #b33939;
+  box-shadow: 0px 0px 2px 2px #b33939;
+  color: #f7f1e3;
+}
+.btn:active {
+  background-color: #7e2929;
+  box-shadow: 0px 0px 2px 2px #7e2929;
+  color: #f7f1e3;
+}
+.btn-trash {
+  border: none;
+  background: none;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+a.github {
+  text-decoration: none;
+  color: #f5f6fa;
+  background-color: #9c88ff;
+  box-shadow: 0px 0px 2px 2px #9c88ff;
+  border-radius: 16px;
+  margin-right: 6px;
+  padding: 0px 8px;
+  transition: 300ms;
+}
+a.github:hover {
+  background-color: #8c7ae6;
+}
+a.github:active {
+  background-color: #6b5cb4;
+}
+
+img.svg {
+  width: 13px;
+  padding: 0 4px;
+}
+
+p.create {
+  color: #2c2c54;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}

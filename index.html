@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Memory Card</title>
+</head>
+<body>
+    <div class="box">
+        <div class="box_form">
+            <form class="box_tag-form" id="flashcardform">
+                <h6 class="hide" id="error">فیلدها نمی توانند خالی باشند!</h6>
+                <h5>عنوان را وارد کنید</h5>
+                <input type="text" placeholder="عنوان" id="title" />
+                <h5>توضیحات را در فیلد زیر بنویسید</h5>
+                <textarea id="description" class="textarea"></textarea>
+                <div class="center">
+                    <button type="submit" class="btn" id="btn-create-card">ساختن کارت</button>
+                    <button type="reset" class="btn">پاک کردن</button>
+                </div>
+            </form>
+        </div>
+        <div class="box-margin"></div>
+        <div class="box_cards" id="box_cards">
+            <!-- Handled By Java Script -->
+        </div>
+    </div>
+    <p class="create">
+        ساخته شده با
+        <img class="svg" src="./images/Love_Heart_SVG.svg" />
+        توسط <a class="github" href="https://github.com/amirreza017/" title="گیت هاب">امیررضا</a>
+    </p>
+
+    <script src="./script.js"></script>    
+</body>
+</html>
