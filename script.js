@@ -37,9 +37,9 @@ function viewList() {
     let moreBtn = document.createElement('button');
     moreBtn.setAttribute('id','more');
     moreBtn.innerHTML = `<img class="more" src="./images/icons8-more-100.png" />`;
-    moreBtn.addEventListener('click', () => {
-        document.getElementById('description-card').classList.toggle('hide');
-    })
+    moreBtn.addEventListener('click', (e) => {
+        e.target.parentElement.parentElement.children[1].classList.toggle("hide");
+    });
 
     //Delete
     let deleteBtn = document.createElement('button');
