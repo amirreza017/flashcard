@@ -1,11 +1,9 @@
 //DOM Variables
-const flashcardForm = document.getElementById('flashcardform');
+
 const flashcardError = document.getElementById('error');
 const flashcardTitle = document.getElementById('title');
 const flashcardDesc = document.getElementById('description');
 const flashcardSubmit = document.getElementById('btn-create-card');
-const flashcardTitleCard = document.getElementById('title-card');
-const flashcardDescCard = document.getElementById('description-card');
 
 let editBool = false;
 
@@ -33,8 +31,16 @@ function viewList() {
 
     // Title And Desc
     div.innerHTML += `<div class="box_cards_card-title" id="title-card">${flashcardTitle.value}</div>
-    <div class="box_cards_card-description" id="description-card">${flashcardDesc.value}</div>`;
-    
+    <div class="box_cards_card-description hide" id="description-card">${flashcardDesc.value}</div>`;
+
+    // More
+    let moreBtn = document.createElement('button');
+    moreBtn.setAttribute('id','more');
+    moreBtn.innerHTML = `<img class="more" src="./images/icons8-more-100.png" />`;
+    moreBtn.addEventListener('click', () => {
+        document.getElementById('description-card').classList.toggle('hide');
+    })
+
     //Delete
     let deleteBtn = document.createElement('button');
     deleteBtn.setAttribute('class','btn-trash');
@@ -42,10 +48,10 @@ function viewList() {
     deleteBtn.addEventListener('click', () => {
         modifyElement(deleteBtn);
     })
+    div.appendChild(moreBtn);
     div.appendChild(deleteBtn);
     boxcard.appendChild(div);
 }
-
 //Modify Elements
 const modifyElement = (element,edit = false) => {
     let parentDiv = element.parentElement;
